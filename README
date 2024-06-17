@@ -1,0 +1,48 @@
+sudo apt-get install sqlite3 libsqlite3-dev
+
+
+git clone https://github.com/DaveGamble/cJSON.git
+
+mkdir build
+
+cd build
+
+cmake ..
+
+make
+
+
+sudo make install
+
+-- Up-to-date: /usr/local/include/cjson/cJSON.h
+
+-- Up-to-date: /usr/local/lib/pkgconfig/libcjson.pc
+
+-- Up-to-date: /usr/local/lib/libcjson.so.1.7.18
+
+-- Up-to-date: /usr/local/lib/libcjson.so.1
+
+-- Up-to-date: /usr/local/lib/libcjson.so
+
+-- Up-to-date: /usr/local/lib/cmake/cJSON/cjson.cmake
+
+-- Up-to-date: /usr/local/lib/cmake/cJSON/cjson-noconfig.cmake
+
+-- Up-to-date: /usr/local/lib/cmake/cJSON/cJSONConfig.cmake
+
+-- Up-to-date: /usr/local/lib/cmake/cJSON/cJSONConfigVersion.cmake
+
+_______________________________________________________________________
+
+gcc HTTPServer.c -o main -lsqlite3 -L/usr/local/lib -lcjson
+
+gcc HTTPServer.c -o main -lsqlite3 -lcjson
+
+gcc HTTPServer.c -o main -lsqlite3 
+
+gcc HTTPServer.c -o main -I/usr/local/include/cjson -I/usr/include/sqlite3 -L/usr/local/lib -lcjson -lsqlite3
+
+
+GET Request 
+
+http://localhost:8383/
